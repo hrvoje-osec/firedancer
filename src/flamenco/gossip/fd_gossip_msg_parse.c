@@ -727,7 +727,7 @@ fd_gossip_msg_parse( fd_gossip_view_t * view,
   uint tag = 0;
   CHECK_LEFT(                      4U );   tag = FD_LOAD( uint, CURSOR ); INC( 4U );
   CHECK(   tag<=FD_GOSSIP_MESSAGE_LAST );
-  view->tag = (uchar)tag;
+  view->tag = tag;
 
   switch( view->tag ){
     case FD_GOSSIP_MESSAGE_PULL_REQUEST:
