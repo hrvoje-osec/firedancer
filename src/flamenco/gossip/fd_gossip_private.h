@@ -303,7 +303,7 @@ struct __attribute__((__packed__)) fd_gossip_view_pong {
 typedef struct fd_gossip_view_pong fd_gossip_view_pong_t;
 
 struct fd_gossip_view {
-  uint tag; // uint in rust bincode
+  uchar tag; // uint in rust bincode
   union {
     fd_gossip_view_pull_request_t  pull_request[ 1 ];
     fd_gossip_view_pull_response_t pull_response[ 1 ];
